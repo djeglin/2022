@@ -1,0 +1,67 @@
+---
+import { Picture } from '@astrojs/image/components';
+import WorkLayout from '../layouts/WorkLayout.astro'
+import '@styles/work.css'
+import image1 from '@images/wit-screen1.png'
+import image2 from '@images/wit-screen2.png'
+import seedlipHero from '@images/seedlip-hero.jpg'
+
+const title = "WIT x Reebok"
+---
+
+<WorkLayout title={title}>
+	<section class="hero">
+		<video autoplay muted>
+			<source src="/assets/wit-hero-converted.mp4" type="video/mp4">
+		</video>
+	</section>
+	<section class="content">
+		<h1>A hotly anticipated launch</h1>
+		<svg width="110" height="40" viewBox="0 0 110 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo">
+			<g clip-path="url(#clip0_16_26)">
+			<path d="M20.006 0C14.7001 0 9.61147 2.10777 5.85962 5.85962C2.10777 9.61147 0 14.7001 0 20.006C0 25.3119 2.10777 30.4005 5.85962 34.1524C9.61147 37.9042 14.7001 40.012 20.006 40.012C25.3119 40.012 30.4005 37.9042 34.1524 34.1524C37.9042 30.4005 40.012 25.3119 40.012 20.006C40.012 14.7001 37.9042 9.61147 34.1524 5.85962C30.4005 2.10777 25.3119 0 20.006 0V0ZM29.906 28.132L25.226 32.812V19.47L15.622 12.45V32.813L10.942 28.132V11.044L15.622 6.364L29.9 16.823V28.132H29.906ZM78.67 33.224H85.122V6.767H78.664V33.216L78.67 33.224ZM68.57 6.767H75.358L69.229 33.216H62.719L59.582 20.565C59.194 22.156 56.482 33.215 56.482 33.215H49.962L43.925 6.768H50.541L53.357 19.948C53.787 18.112 56.464 6.768 56.464 6.768H62.689L65.79 19.96C66.084 18.553 68.57 6.768 68.57 6.768V6.767ZM88.44 6.767V12.969H95.234V33.216H101.683V12.977H108.45V6.767H88.44Z" fill="currentcolor"/>
+			</g>
+			<defs>
+			<clipPath id="clip0_16_26">
+			<rect width="110" height="40" fill="currentcolor"/>
+			</clipPath>
+			</defs>
+		</svg>
+
+		<div class="bodyContent">
+			<div class="text">
+				<p>Getting to help WIT Fitness and Reebok launch a new shoe together was a very cool experience, with some interesting constraints to work within.</p>
+				<h2>Heavy lifting</h2>
+				<p>The launch of a new shoe, in partnership with Reebok, was an incredibly big deal for our clients at WIT. This was the first time doing this where Reebok had actually put up some funds to market the launch, and we were driving a lot of the technology that made the launch possible. It simply had to work.</p>
+				<p>Producing a microsite to launch a new product would have been relatively simple, but WIT wanted to keep everything within their Shopify Plus platform, so we had to work with them to find an effective way to do lots of custom work that could be turned on and off within their platform. We ended up deciding on leveraging Shogun, a flexible page builder, and already part of WIT's ecosystem. This, partnered with custom components, enabled us to build out a completely custom launch day product experience for the new shoe, which solved the first half of the challenge.</p>
+				<p>The second half of the brief was to assist WIT in running a launch stream for the new shoe, with special appearances from popular crossfit athletes, a timed shoe reveal to tie in to the product going live on the website, and other interview segments. As WIT had no real experience with event streaming, they were nervous about running this themselves, and reluctant to do it live. They opted to pre-record the event, and then hand it off to me to make sure that the stream went live at the right time, and that everything worked properly on YouTube. Everything went off without a hitch, and WIT sold tens of thousands of pairs of the new shoes in record time as eager customers went from the livestream directly to the product page.</p>
+				<h2>The tech</h2>
+				<p><span class="title">Front-end:</span> HTML, CSS, Javascript, Shogun</p>
+				<p><span class="title">Back-end:</span> Shopify</p>
+				<p><span class="title">Hosting:</span> Shopify, YouTube</p>
+				<h2>My Responsibilities</h2>
+				<p>Front-end development, Animation design, livestream management</p>
+			</div>
+			<div class="images">
+				<Picture src={image1} widths={[280, 320, 380, 420, 450, 560, 640, 768, 880, 960]} sizes="(max-width: 960px) 100vw, 420px" formats={['avif', 'jpeg', 'png', 'webp']} alt="WIT website screenshot" />
+				<Picture src={image2} widths={[280, 320, 380, 420, 450, 560, 640, 768, 880, 960]} sizes="(max-width: 960px) 100vw, 420px" formats={['avif', 'jpeg', 'png', 'webp']} alt="WIT website screenshot" />
+			</div>
+		</div>
+		<!-- <a class="btn" href="https://www.millygrace.co.uk" target="_blank" rel="noopener noreferrer">Visit</a> -->
+		<a class="next" href="/seedlip">
+			<Picture src={seedlipHero} widths={[280, 320, 380, 420, 450, 560, 640, 768, 880, 960, 1024, 1120, 1180, 1200, 1280, 1360, 1400]} sizes="100vw" formats={['avif', 'jpeg', 'png', 'webp']} alt="Go to next project" />
+			<span>
+				<svg width="41" height="22" viewBox="0 0 41 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_43_25)">
+					<path d="M28.816 1L38.914 11L28.816 21M38.213 11H0" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+					</g>
+					<defs>
+					<clipPath id="clip0_43_25">
+					<rect width="41" height="22" fill="white"/>
+					</clipPath>
+					</defs>
+				</svg>
+			</span>
+		</a>
+	</section>
+</WorkLayout>

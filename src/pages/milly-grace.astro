@@ -2,12 +2,16 @@
 import { Picture } from '@astrojs/image/components';
 import WorkLayout from '../layouts/WorkLayout.astro'
 import '@styles/work.css'
-import image1 from '../images/am-screen1.png'
-import image2 from '@images/am-screen2.png'
+import image1 from '../images/mg-screen1.png'
+import image2 from '@images/mg-screen2.png'
 import mgHero from '@images/mg-hero.jpg'
+import witHero from '@images/wit-hero.jpg'
+
+
+const title = "Milly Grace"
 ---
 
-<WorkLayout>
+<WorkLayout title={title}>
 	<section class="hero">
 		<Picture src={mgHero} widths={[280, 320, 380, 420, 450, 560, 640, 768, 880, 960, 1024, 1120, 1180, 1200, 1280, 1360, 1400, 1500, 1600]} sizes="100vw" formats={['avif', 'jpeg', 'png', 'webp']} alt="Milly Grace hero image" />
 	</section>
@@ -35,23 +39,26 @@ import mgHero from '@images/mg-hero.jpg'
 
 		<div class="bodyContent">
 			<div class="text">
-				<p>My final piece of work before leaving my friends at Active Matter for pastures new was the second major update to their website that I had made. This time the goal was to have a more striking look, and more purposeful messaging.</p>
-				<h2>It's the little touches</h2>
-				<p>As with so much in the design world, its the last 5% that makes for the most significant change in the “feel” of a project. The attention to detail; the craft. We wanted to make sure that this project really felt like there was a real attention to detail given to it.</p>
-				<p>In this case, that meant interpreting the designs being worked on creatively – turning a flat illustration into an animated mural, turning a highlighted bit of text in the header into an animation which we used in a great many other places. Making sure that all these small interactions felt like they had been crafted, rather than just put together, was really important here – the website might not be the first point of contact for prospective customers, but it is an important reference point and a user’s first impression of what they see here will inform their opinion of the care that the Active Matter team will take of thier brand and product.</p>
+				<p>For jewellery startup Milly Grace, it was important to give them a classic look whilst enabling ultimate configurability of their Shopify site by using the very latest tools and techniques.</p>
+				<h2>Quietly innovative</h2>
+				<p>As a small business, it was essential that Milly Grace be able to manage their store, and the content on their website, quickly and efficiently. The theme they had previously made this management harder for them, so it was a high priority to give them a really great management experience, whilst making sure that the front-end was beautiful too.</p>
+				<p>To accomplish this, I made use of the very latest tools Shopify had to offer; a new themeing system, and new guidelines for how to achieve flexible page layouts and content, which were brand new to the Shopify ecosystem, were employed in the creation of this theme. The site now gives the editors amazing flexibility - they can change the content and colour scheme of blocks quickly and easily within their management system, and I created a set of colour schemes that used their pallate and worked well together to make sure everything felt tied together no matter what combinations they chose to use.</p>
+				<p>The final piece of the puzzle was their blog, called "The Journal". Shopify's blogging system is notoriously bad, and most of the solutions out there in the Shopify ecosystem, such as Shogun, quickly become cost prohibitive for a small business if you want to do things like use custom code. So I set about creating a solution that would give Milly Grace an awesome blogging experience without needing to be tied in to another monthly subscription. I settled on a solution using Sanity to create content, and 11ty to render it on demand using lambda functions on Netlify, then using the Shopify admin API to fire the resulting html back into the Shopify blog. Its the kind of innovation that nobody who visits the site will ever know about, but its a real quality-of-life win for the client, and a truly innovative solution that I don't think anyone else has really done before.</p>
 				<h2>The tech</h2>
-				<p><span class="title">Front-end:</span> Shopify Dawn base, CSS3, Web Components</p>
+				<p><span class="title">Front-end:</span> Shopify Dawn base, CSS3, Web Components, Eleventy</p>
 				<p><span class="title">Back-end:</span> Shopify & Sanity</p>
 				<p><span class="title">Hosting & Cloud functions:</span> Shopify & Netlify</p>
+				<h2>My Responsibilities</h2>
+				<p>Front-end development, Solution architecture, CMS configuration, Nodejs services, Infrastructure configuration</p>
 			</div>
 			<div class="images">
-				<Picture src={image1} widths={[280, 320, 380, 420, 450, 560, 640, 768, 880, 960]} sizes="(max-width: 960px) 100vw, 420px" formats={['avif', 'jpeg', 'png', 'webp']} alt="Active Matter website screenshot" />
-				<Picture src={image2} widths={[280, 320, 380, 420, 450, 560, 640, 768, 880, 960]} sizes="(max-width: 960px) 100vw, 420px" formats={['avif', 'jpeg', 'png', 'webp']} alt="Active Matter website screenshot" />
+				<Picture src={image1} widths={[280, 320, 380, 420, 450, 560, 640, 768, 880, 960]} sizes="(max-width: 960px) 100vw, 420px" formats={['avif', 'jpeg', 'png', 'webp']} alt="Milly Grace website screenshot" />
+				<Picture src={image2} widths={[280, 320, 380, 420, 450, 560, 640, 768, 880, 960]} sizes="(max-width: 960px) 100vw, 420px" formats={['avif', 'jpeg', 'png', 'webp']} alt="Milly Grace website screenshot" />
 			</div>
 		</div>
-		<a class="btn" href="https://activematter.co" target="_blank" rel="noopener noreferrer">Visit</a>
-		<a class="next" href="/milly-grace">
-			<Picture src={mgHero} widths={[280, 320, 380, 420, 450, 560, 640, 768, 880, 960, 1024, 1120, 1180, 1200, 1280, 1360, 1400]} sizes="100vw" formats={['avif', 'jpeg', 'png', 'webp']} alt="Go to next project" />
+		<a class="btn" href="https://www.millygrace.co.uk" target="_blank" rel="noopener noreferrer">Visit</a>
+		<a class="next" href="/wit">
+			<Picture src={witHero} widths={[280, 320, 380, 420, 450, 560, 640, 768, 880, 960, 1024, 1120, 1180, 1200, 1280, 1360, 1400]} sizes="100vw" formats={['avif', 'jpeg', 'png', 'webp']} alt="Go to next project" />
 			<span>
 				<svg width="41" height="22" viewBox="0 0 41 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g clip-path="url(#clip0_43_25)">

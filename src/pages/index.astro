@@ -1,9 +1,11 @@
 ---
 import HomeLayout from '../layouts/HomeLayout.astro'
 import '@styles/home.css'
+
+const title = "David Eglin – Selected works"
 ---
 
-<HomeLayout>
+<HomeLayout title={title}>
 	<section>
 		<h1>David<span> Eglin</span></h1>
 		<p class="postHeader">Selected works.</p>
@@ -104,7 +106,7 @@ import '@styles/home.css'
 				</a>
 			</li>
 		</ul>
-		&copy; 2022
+		<span class="copy">&copy; 2022</span>
 	</nav>
 </HomeLayout>
 

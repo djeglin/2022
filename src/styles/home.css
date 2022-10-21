@@ -20,6 +20,7 @@ h1 {
 	margin-bottom: .5em;
 	margin-left: calc(var(--font-sans-tracking) * 1.5);
 	max-width: calc(100% - var(--font-sans-tracking) * 1);
+	animation: fadeUp 1s ease-out both;
 }
 
 h1 span {
@@ -37,6 +38,8 @@ h1 span {
 	color: var(--color-white);
 	font-size: var(--step-2);
 	margin-top: 0;
+	animation: fadeUp 1s ease-out both;
+	animation-delay: .3s;
 }
 
 nav {
@@ -62,6 +65,23 @@ nav li {
 	display: block;
 	margin: 0 2rem 2rem;
 	max-width: calc(50% - 4rem);
+	animation: fadeUp 1s ease-out both;
+}
+
+nav li:nth-child(1) {
+	animation-delay: .5s;
+}
+nav li:nth-child(2) {
+	animation-delay: .6s;
+}
+nav li:nth-child(3) {
+	animation-delay: .7s;
+}
+nav li:nth-child(4) {
+	animation-delay: .8s;
+}
+nav li:nth-child(5) {
+	animation-delay: .9s;
 }
 
 nav a {
@@ -79,4 +99,21 @@ nav a:active {
 nav svg {
 	display: block;
 	width: 100%;
+}
+
+nav .copy {
+	animation: fadeUp 1s ease-out both;
+	animation-delay: 1.7s;
+}
+
+@keyframes fadeUp {
+	0% {
+		opacity: 0;
+		transform: translateY(1.5rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
 }

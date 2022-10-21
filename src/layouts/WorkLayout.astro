@@ -1,8 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro'
+
+const { title } = Astro.props
 ---
 
-<BaseLayout>
+<BaseLayout title={ title }>
 	<main class="work">
 		<header>
 			<a href="/" class="back">
@@ -16,7 +18,7 @@ import BaseLayout from './BaseLayout.astro'
 					</clipPath>
 					</defs>
 				</svg>
-				<span>Back</span>
+				<span>Home</span>
 			</a>
 		</header>
 		<slot />
@@ -54,6 +56,10 @@ import BaseLayout from './BaseLayout.astro'
 		min-width: 5rem;
 		text-indent: -5rem;
 		overflow: hidden;
+		font-family: var(--font-sans);
+		letter-spacing: var(--font-sans-tracking);
+		text-transform: uppercase;
+		font-size: var(--step--2);
 		color: var(--color-pink);
 		background-color: var(--color-grey);
 		transform: translateX(-1rem);

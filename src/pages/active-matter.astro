@@ -3,11 +3,13 @@ import { Picture } from '@astrojs/image/components';
 import WorkLayout from '../layouts/WorkLayout.astro'
 import '@styles/work.css'
 import image1 from '../images/am-screen1.png'
-import image2 from '@images/am-screen2.png'
-import mgHero from '@images/mg-hero.jpg'
+import image2 from '../images/am-screen2.png'
+import mgHero from '../images/mg-hero.jpg'
+
+const title = "Active Matter"
 ---
 
-<WorkLayout>
+<WorkLayout title={title}>
 	<section class="hero">
 		<video autoplay loop muted>
 			<source src="/assets/am-anim-converted.mp4" type="video/mp4">
@@ -42,6 +44,8 @@ import mgHero from '@images/mg-hero.jpg'
 				<p><span class="title">Front-end:</span> Gatsby, React, PostCSS</p>
 				<p><span class="title">Back-end:</span> Sanity</p>
 				<p><span class="title">Hosting & Continuous deployment:</span> Netlify</p>
+				<h2>My Responsibilities</h2>
+				<p>Solution architecture, Content modelling, CMS configuration, Front-end development, Infrastructure configuration</p>
 			</div>
 			<div class="images">
 				<Picture src={image1} widths={[280, 320, 380, 420, 450, 560, 640, 768, 880, 960]} sizes="(max-width: 960px) 100vw, 420px" formats={['avif', 'jpeg', 'png', 'webp']} alt="Active Matter website screenshot" />
