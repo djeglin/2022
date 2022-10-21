@@ -1,0 +1,26 @@
+---
+import BaseLayout from './BaseLayout.astro'
+---
+
+<BaseLayout>
+	<main class="home">
+		<slot />
+	</main>
+</BaseLayout>
+
+<style>
+	.home {
+		width: 100%;
+		max-width: 100rem;
+		margin: 0 auto;
+		height: 100vh;
+		--webkit-height: 100svh;
+		display: grid;
+		grid-template-rows: 100%;
+		grid-template-cols: 100%;
+		grid-template-areas: 'main';
+		justify-content: center;
+		align-items: center;
+	}
+
+</style>

@@ -1,0 +1,75 @@
+---
+import BaseLayout from './BaseLayout.astro'
+---
+
+<BaseLayout>
+	<main class="work">
+		<header>
+			<a href="/" class="back">
+				<svg width="41" height="22" viewBox="0 0 41 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_20_21)">
+					<path d="M12.184 1L2.086 11L12.184 21M2.787 11H41" stroke="#FF0471" stroke-width="2" stroke-miterlimit="10"/>
+					</g>
+					<defs>
+					<clipPath id="clip0_20_21">
+					<rect width="41" height="22" fill="white" transform="matrix(-1 0 0 1 41 0)"/>
+					</clipPath>
+					</defs>
+				</svg>
+				<span>Back</span>
+			</a>
+		</header>
+		<slot />
+	</main>
+</BaseLayout>
+
+<style>
+	.work {
+		width: 100%;
+		max-width: 100rem;
+		margin: 0 auto;
+	}
+	header {
+		width: 100%;
+		max-width: 100rem;
+		padding: 1.5rem;
+		box-sizing: border-box;
+	}
+
+	.back {
+		text-decoration: none;
+	}
+	.back svg {
+		display: inline-block;
+		transition: all .3s ease-out;
+	}
+	.back:hover svg,
+	.back:focus svg,
+	.back:active svg {
+		transform: translateX(-1rem);
+	}
+
+	.back span {
+		display: inline-block;
+		min-width: 5rem;
+		text-indent: -5rem;
+		overflow: hidden;
+		color: var(--color-pink);
+		background-color: var(--color-grey);
+		transform: translateX(-1rem);
+		padding-left: .5rem;
+		transition: all .3s ease-out;
+	}
+
+	.back:hover span,
+	.back:focus span,
+	.back:active span {
+		text-indent: 0;
+	}
+
+	@media (min-width: 100rem) {
+		header {
+			padding: 2.5rem 0;
+		}
+	}
+</style>

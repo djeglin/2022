@@ -1,0 +1,54 @@
+---
+const {frontmatter} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>David Eglin — Selected works. — djegl.in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&family=Playfair+Display&display=swap" rel="stylesheet">
+  </head>
+  <body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	html, body {
+		width: 100%;
+		min-height: 100%;
+		margin: 0;
+	}
+	html {
+		--color-grey: #222;
+		--color-white: #fff;
+		--color-offwhite: #e2e2e2;
+		--color-pink: #FF0471;
+
+		--font-sans: 'Jost', sans-serif;
+		--font-serif: 'Playfair Display', serif;
+
+		--font-sans-tracking: .3em;
+
+		--font-serif-leading: 166%;
+
+		--step--2: clamp(0.69rem, calc(0.65rem + 0.21vw), 0.80rem);
+		--step--1: clamp(0.83rem, calc(0.77rem + 0.33vw), 1.00rem);
+		--step-0: clamp(1.00rem, calc(0.90rem + 0.49vw), 1.25rem);
+		--step-1: clamp(1.20rem, calc(1.06rem + 0.71vw), 1.56rem);
+		--step-2: clamp(1.44rem, calc(1.24rem + 1.00vw), 1.95rem);
+		--step-3: clamp(1.73rem, calc(1.45rem + 1.39vw), 2.44rem);
+		--step-4: clamp(2.07rem, calc(1.69rem + 1.91vw), 3.05rem);
+		--step-5: clamp(2.49rem, calc(1.97rem + 2.59vw), 3.82rem);
+	}
+	body {
+		background-color: var(--color-grey);
+		color: var(--color-offwhite);
+		font-family: var(--font-serif);
+	}
+</style>

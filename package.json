@@ -1,0 +1,25 @@
+{
+  "name": "djeglin2022",
+  "version": "1.0.0",
+  "description": "Basic portfolio built with 11ty",
+  "browserslist": [
+    "> 0.5%",
+    "not IE 11"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:djeglin/2022.git"
+  },
+  "author": "David Eglin",
+  "license": "MIT",
+  "dependencies": {
+    "@astrojs/image": "^0.10.0",
+    "astro": "^1.5.2"
+  }
+}
